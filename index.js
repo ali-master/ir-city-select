@@ -8,9 +8,9 @@ $(document).ready(function() {
 var loadProvinces = function() {
 	var element = $(this);
 	element.empty();
-	element.append($('<option></option>').attr('value', 'empty'));
+	element.append($('<option />').attr('value', 'empty'));
 	$.each(data, function(province, list) {
-		var option = $('<option></option>').attr('value', province).text(province);
+		var option = $('<option />').attr('value', province).text(province);
 		element.append(option);
 	});
 };
@@ -23,7 +23,7 @@ var loadCities = function() {
 	citySelector.empty();
 
 	$.each(cityList, function(index, city) {
-		var option = $('<option></option>').attr('value', city).text(city);
+		var option = $('<option />').attr('value', city).text(city);
 		citySelector.append(option);
 	});
 };
